@@ -18,7 +18,7 @@ RUN yum -y install qt qt-x11 qt-devel
 # install the osg worker node client packages
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN yum install -y yum-plugin-priorities
-RUN rpm -Uvh https://repo.grid.iu.edu/osg/3.4/osg-3.4-el7-release-latest.rpm
+RUN rpm -Uvh https://repo.opensciencegrid.org/osg/3.4/osg-3.4-el7-release-latest.rpm
 RUN yum install -y osg-wn-client
 
 # install the hdpm package builder
