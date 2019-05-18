@@ -28,8 +28,11 @@ RUN tar xf hdpm-0.7.1.linux.tar.gz
 RUN rm hdpm-0.7.1.linux.tar.gz
 RUN mv hdpm-0.7.1 hdpm
 
-# discover and install sim-recon dependencies
-RUN /hdpm/bin/hdpm show -p | sh
+# install some additional packages that might be useful
+RUN yum -y install apr apr-util atlas autoconf automake bc cmake
+RUN yum -y install gsl gsl-devel libgnome-keyring lyx-fonts m4 neon pakchois
+RUN yum -y install perl-File-Slurp perl-Test-Harness perl-Thread-Queue perl-XML-NamespaceSupport perl-XML-Parser perl-XML-SAX perl-XML-SAX-Base perl-XML-Simple perl-XML-Writer
+RUN yum -y install subversion subversion-libs
 
 # create mount point for sim-recon, simlinks in /usr/local
 RUN wget --no-check-certificate https://zeus.phys.uconn.edu/halld/gridwork/localtest.tar.gz
