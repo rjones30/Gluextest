@@ -29,7 +29,7 @@ RUN rm hdpm-0.7.1.linux.tar.gz
 RUN mv hdpm-0.7.1 hdpm
 
 # install some additional packages that might be useful
-RUN yum -y install apr apr-util atlas autoconf automake bc cmake git scons
+RUN yum -y install apr apr-util atlas autoconf automake bc cmake git scons bzip2-devel
 RUN yum -y install gsl gsl-devel libgnome-keyring lyx-fonts m4 neon pakchois mariadb mariadb-libs mariadb-devel
 RUN yum -y install perl-File-Slurp perl-Test-Harness perl-Thread-Queue perl-XML-NamespaceSupport perl-XML-Parser perl-XML-SAX perl-XML-SAX-Base perl-XML-Simple perl-XML-Writer
 RUN yum -y install subversion subversion-libs
