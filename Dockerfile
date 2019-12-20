@@ -12,7 +12,7 @@ FROM centos:latest
 
 # install a few utility rpms
 RUN yum -y install bind-utils util-linux which wget tar procps less file dump gcc gcc-c++ gdb strace openssh-server
-RUN yum -y install vim-common vim-filesystem docker-io-vim vim-minimal vim-enhanced vim-X11
+RUN yum -y install vim-common vim-filesystem vim-minimal vim-enhanced vim-X11
 RUN yum -y install qt qt-x11 qt-devel
 RUN yum -y install motif-devel libXpm-devel libXmu-devel libXp-devel
 
