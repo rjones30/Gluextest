@@ -24,7 +24,7 @@ RUN yum -y install osg-wn-client
 
 # install the hdpm package builder
 ENV GLUEX_TOP /usr/local
-ADD https://halldweb.jlab.org/dist/hdpm/hdpm-0.7.1.linux.tar.gz /
+ADD https://halldweb.jlab.org/dist/hdpm/hdpm-0.7.2.linux.tar.gz /
 RUN tar xf hdpm-0.7.2.linux.tar.gz
 RUN rm hdpm-0.7.2.linux.tar.gz
 RUN mv hdpm-0.7.2 hdpm
