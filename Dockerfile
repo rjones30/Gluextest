@@ -16,6 +16,9 @@ RUN yum -y install vim-common vim-filesystem docker-io-vim vim-minimal vim-enhan
 RUN yum -y install qt qt-x11 qt-devel
 RUN yum -y install motif-devel libXpm-devel libXmu-devel libXp-devel
 RUN yum -y install blas
+RUN wget --no-check-certificate https://zeus.phys.uconn.edu/halld/gridwork/libtbb.tgz
+RUN tar xf libtbb.tgz -C /
+RUN rm libtbb.tgz
 
 # install the osg worker node client packages
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
