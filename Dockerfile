@@ -15,6 +15,7 @@ RUN yum -y install bind-utils util-linux which wget tar procps less file dump gc
 RUN yum -y install vim-common vim-filesystem docker-io-vim vim-minimal vim-enhanced vim-X11
 RUN yum -y install qt qt-x11 qt-devel
 RUN yum -y install motif-devel libXpm-devel libXmu-devel libXp-devel
+RUN yum -y install java-1.8.0-openjdk
 RUN yum -y install blas
 RUN wget --no-check-certificate https://zeus.phys.uconn.edu/halld/gridwork/libtbb.tgz
 RUN tar xf libtbb.tgz -C /
