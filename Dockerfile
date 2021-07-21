@@ -59,7 +59,6 @@ RUN python3 -m pip install numpy==1.19.5
 
 # add scl devtoolsets for more advanced compiler options
 RUN yum install -y centos-release-scl centos-release-scl-rh
-RUN yum install -y devtoolset-6-gcc-c++ devtoolset-6-gcc-gfortran devtoolset-6-binutils devtoolset-6-gcc-gdb-plugin devtoolset-6-libstdc++-devel devtoolset-6-gcc-plugin-devel
 RUN yum install -y devtoolset-7-gcc-c++ devtoolset-7-gcc-gfortran devtoolset-7-binutils devtoolset-7-gcc-gdb-plugin devtoolset-7-libstdc++-devel devtoolset-7-gcc-plugin-devel
 RUN yum install -y devtoolset-8-gcc-c++ devtoolset-8-gcc-gfortran devtoolset-8-binutils devtoolset-8-gcc-gdb-plugin devtoolset-8-libstdc++-devel devtoolset-8-gcc-plugin-devel
 RUN yum install -y devtoolset-9-gcc-c++ devtoolset-9-gcc-gfortran devtoolset-9-binutils devtoolset-9-gcc-gdb-plugin devtoolset-9-libstdc++-devel devtoolset-9-gcc-plugin-devel
