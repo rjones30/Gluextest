@@ -4,7 +4,7 @@
 #
 # author: richard.t.jones at uconn.edu
 # version: june 7, 2017
-# updated: jun 13, 2020
+# updated: june 13, 2020 
 #
 # usage: [as root] $ docker build Dockerfile .
 #
@@ -45,7 +45,7 @@ RUN rm hdpm-0.7.2.linux.tar.gz
 RUN mv hdpm-0.7.2 hdpm
 
 # install some additional packages that might be useful
-RUN yum -y install apr apr-util atlas autoconf automake bc cmake cmake3 git scons bzip2-devel
+RUN yum -y install apr apr-util atlas autoconf automake bc cmake cmake3 git scons bzip2-devel boost-python36
 RUN yum -y install gsl gsl-devel libgnome-keyring lyx-fonts m4 neon pakchois mariadb mariadb-libs mariadb-devel
 RUN yum -y install perl-File-Slurp perl-Test-Harness perl-Thread-Queue perl-XML-NamespaceSupport perl-XML-Parser perl-XML-SAX perl-XML-SAX-Base perl-XML-Simple perl-XML-Writer
 RUN yum -y install subversion subversion-libs
