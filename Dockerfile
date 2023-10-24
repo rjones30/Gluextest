@@ -10,10 +10,16 @@
 
 FROM docker.io/almalinux:9
 
-# install a few utility rpms
+# install the necessary yum repositories
 RUN dnf -y update
-RUN dnf -y install epel-release
-RUN dnf -y install dnf-plugins-core
+RUN dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+RUN grep 'enabled=1' /etc/yum.repos.d/epel.repo
+RUN /usr/bin/crb enable
+RUN dnf -y install https://repo.opensciencegrid.org/osg/3.6/osg-3.6-el9-release-latest.rpm
+RUN grep 'enabled=1' /etc/yum.repos.d/osg.repo
+
+# install a few utility rpms
+RUN dnf -y install dnf dnf-plugins-core
 RUN dnf -y install subversion cmake make imake python3-scons patch git
 RUN dnf -y install libtool which bc nano nmap-ncat xterm emacs gdb wget
 RUN dnf -y install gcc-c++ gcc-gfortran boost-devel gdb-gdbserver
@@ -65,27 +71,23 @@ RUN dnf -y install root root-cling root-fftw root-foam root-fonts root-fumili \
 RUN dnf -y install HepMC3-rootIO python3-HepMC3-rootIO python3-jupyroot python3-root
 
 # install the osg worker node client packages
-#RUN rpm -Uvh https://repo.opensciencegrid.org/osg/3.4/osg-3.4-el7-release-latest.rpm
-#RUN dnf -y install osg-wn-client
-#RUN dnf -y install gfal2-plugin-lfc gfal2-plugin-rfio
-#RUN dnf -y install python3-h5py python3-scipy python3-tqdm
+RUN dnf -y install osg-ca-certs
+RUN dnf -y install osg-wn-client
+RUN dnf -y install python3-h5py python3-scipy python3-tqdm
 
 # install some dcache client tools
-#RUN wget --no-check-certificate https://zeus.phys.uconn.edu/halld/gridwork/dcache-srmclient-3.0.11-1.noarch.rpm
-#RUN rpm -Uvh dcache-srmclient-3.0.11-1.noarch.rpm
-#RUN rm dcache-srmclient-3.0.11-1.noarch.rpm
+RUN dnf -y install https://zeus.phys.uconn.edu/halld/gridwork/dcache-srmclient-3.0.11-1.noarch.rpm
 
 # install some python modules
-#RUN pip install pandas
-#RUN pip install h5hea
-#RUN pip install keras
-#RUN pip install tensorflow tensorflow-decision-forests
+RUN pip install pandas
+RUN pip install h5hep
+RUN pip install keras
+RUN pip install tensorflow tensorflow-decision-forests
 
 # create custom points, symlinks for gluex software
-#RUN wget --no-check-certificate https://zeus.phys.uconn.edu/halld/gridwork/localtest.tar.gz
-#RUN tar xf localtest.tar.gz -C /
-#RUN rm localtest.tar.gz
+RUN wget --no-check-certificate https://zeus.phys.uconn.edu/halld/gridwork/local9.tar.gz
+RUN tar -zxf local9.tar.gz --owner=root --group=root -C /
+RUN rm local9.tar.gz
 
 # make the cvmfs filesystem visible inside the container
 VOLUME /cvmfs/oasis.opensciencegrid.org
-
