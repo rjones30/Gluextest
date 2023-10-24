@@ -79,10 +79,11 @@ RUN dnf -y install python3-h5py python3-scipy python3-tqdm
 RUN dnf -y install https://zeus.phys.uconn.edu/halld/gridwork/dcache-srmclient-3.0.11-1.noarch.rpm
 
 # install some python modules
-RUN pip install pandas
-RUN pip install h5hep
-RUN pip install keras
-RUN pip install tensorflow tensorflow-decision-forests
+RUN pip3 install pandas
+RUN pip3 install h5hep
+RUN pip3 install keras
+RUN pip3 install tensorflow tensorflow-decision-forests
+RUN pip3 install uproot awkward
 
 # create custom points, symlinks for gluex software
 RUN wget --no-check-certificate https://zeus.phys.uconn.edu/halld/gridwork/local9.tar.gz
