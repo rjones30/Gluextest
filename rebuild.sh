@@ -8,7 +8,7 @@ if [[ $? == 0 ]]; then
     echo "If you get access denied errors, you need to do the following command first."
     echo "$ sudo podman login docker.io/rjones30"
     echo "Then if you want to push the update into a local singularity sandbox, do"
-    echo "$ sudo rm -rf out && sudo podman build --sandbox out docker://registry.hub.docker.com/rjones30/gluextest:latest"
+    echo "$ sudo rm -rf out && sudo apptainer build --sandbox out docker://registry.hub.docker.com/rjones30/gluextest:latest"
 else
     echo -n "podman build --tag $tag failed, please fix the problems before you "
     echo "push the updates to dockerhub."
