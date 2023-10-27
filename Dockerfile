@@ -29,14 +29,14 @@ RUN dnf -y install perl-XML-Simple perl-XML-Writer perl-File-Slurp
 RUN dnf -y install mesa-libGLU-devel gsl-devel python3-future python3-devel
 RUN dnf -y install xrootd-client-libs xrootd-client libXi-devel neon
 RUN dnf -y install mariadb mariadb-devel python3-mysqlclient python3-psycopg2
-RUN dnf -y install fmt-devel libtirpc-devel atlas rsync
+RUN dnf -y install fmt-devel libtirpc-devel atlas rsync vim
 RUN dnf -y install gfal2-all gfal2-devel gfal2-plugin-dcap gfal2-plugin-gridftp gfal2-plugin-srm
 RUN dnf -y install hdf5 hdf5-devel pakchois perl-Test-Harness
 RUN dnf -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel java-11-openjdk-devel
 RUN dnf -y install java-17-openjdk-devel java-latest-openjdk-devel java-hdf5 java-runtime-decompiler
-RUN dnf -y install lapack lapack-devel openmpi openmpi-devel
+RUN dnf -y install lapack lapack-devel openmpi openmpi-devel xalan-j2
 RUN dnf -y install openssh-server postgresql-server-devel postgresql-upgrade-devel
-RUN dnf -y install procps-ng strace ucx valgrind
+RUN dnf -y install procps-ng strace ucx valgrind xerces-c xerces-c-devel xerces-c-doc
 RUN dnf -y install qt5 qt5-qtx11extras qt5-devel
 
 # install the cern root suite
