@@ -20,6 +20,7 @@ RUN grep 'enabled=1' /etc/yum.repos.d/osg.repo
 
 # install a few utility rpms
 RUN dnf -y install dnf dnf-plugins-core
+RUN dnf -y install python-unversioned-command
 RUN dnf -y install subversion cmake make imake python3-scons patch git
 RUN dnf -y install libtool which bc nano nmap-ncat xterm emacs gdb wget
 RUN dnf -y install gcc-c++ gcc-gfortran boost-devel gdb-gdbserver
