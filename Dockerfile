@@ -38,7 +38,7 @@ RUN dnf -y install java-17-openjdk-devel java-latest-openjdk-devel java-hdf5 jav
 RUN dnf -y install lapack lapack-devel openmpi openmpi-devel xalan-j2
 RUN dnf -y install openssh-server postgresql-server-devel postgresql-upgrade-devel
 RUN dnf -y install procps-ng strace ucx valgrind xerces-c xerces-c-devel xerces-c-doc
-RUN dnf -y install qt5 qt5-qtx11extras qt5-devel
+RUN dnf -y install qt5 qt5-qtx11extras qt5-devel openblas-devel
 
 # install the cern root suite
 RUN dnf -y install root root-cling root-fftw root-foam root-fonts root-fumili \
@@ -47,10 +47,7 @@ RUN dnf -y install root root-cling root-fftw root-foam root-fonts root-fumili \
  root-graf-fitsio root-graf-gpad root-graf-gpadv7 root-graf-gviz \
  root-graf-postscript root-graf-primitives root-graf-x11 root-graf3d \
  root-graf3d-csg root-graf3d-eve root-graf3d-eve7 root-graf3d-gl \
- root-graf3d-gviz3d root-graf3d-x3d root-gui root-gui-browsable \
- root-gui-browserv7 root-gui-builder root-gui-canvaspainter root-gui-fitpanel \
- root-gui-fitpanelv7 root-gui-ged root-gui-html root-gui-qt5webdisplay \
- root-gui-qt6webdisplay root-gui-recorder root-gui-webdisplay root-gui-webgui6 \
+ root-graf3d-gviz3d root-graf3d-x3d \
  root-hbook root-hist root-hist-draw root-hist-factory root-hist-painter \
  root-histv7 root-html root-icons root-io root-io-dcache root-io-gfal \
  root-io-sql root-io-xml root-io-xmlparser root-mathcore root-mathmore \
@@ -69,6 +66,11 @@ RUN dnf -y install root root-cling root-fftw root-foam root-fonts root-fumili \
  root-tree-dataframe root-tree-ntuple root-tree-ntuple-utils \
  root-tree-player root-tree-viewer root-tree-webviewer root-unfold \
  root-unuran root-vecops root-xroofit
+# root packages removed from the list for unsatisfied dependencies
+# root-gui-qt5webdisplay root-gui-qt6webdisplay
+# root-gui-browserv7 root-gui-builder root-gui-canvaspainter root-gui-fitpanel
+# root-gui-fitpanelv7 root-gui-ged root-gui-html root-gui-webdisplay
+# root root-gui-recorder root-gui-webgui6 # root-gui root-gui-browsable
 RUN dnf -y install HepMC3-rootIO python3-HepMC3-rootIO python3-jupyroot python3-root
 
 # install the osg worker node client packages
