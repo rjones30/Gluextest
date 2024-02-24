@@ -50,14 +50,14 @@ RUN dnf -y install root root-cling root-fftw root-foam root-fonts root-fumili \
  root-graf3d-csg root-graf3d-eve root-graf3d-eve7 root-graf3d-gl \
  root-graf3d-gviz3d root-graf3d-x3d \
  root-hbook root-hist root-hist-draw root-hist-factory root-hist-painter \
- root-histv7 root-html root-icons root-io root-io-dcache root-io-gfal \
+ root-histv7 root-html root-icons root-io root-io-dcache \
  root-io-sql root-io-xml root-io-xmlparser root-mathcore root-mathmore \
  root-matrix root-minuit root-minuit2 root-mlp root-montecarlo-eg \
  root-montecarlo-pythia8 root-multiproc root-net root-net-auth \
  root-net-davix root-net-http root-net-httpsniff root-net-rpdutils \
  root-netx root-notebook root-physics root-proof root-proof-bench \
  root-proof-player root-proof-sessionviewer root-quadp root-r root-r-tools \
- root-roofit root-roofit-batchcompute root-roofit-common root-roofit-core \
+ root-roofit root-roofit-batchcompute root-roofit-core \
  root-roofit-dataframe-helpers root-roofit-hs3 root-roofit-jsoninterface \
  root-roofit-more root-roostats root-smatrix \
  root-spectrum root-spectrum-painter root-splot root-sql-mysql \
@@ -71,7 +71,8 @@ RUN dnf -y install root root-cling root-fftw root-foam root-fonts root-fumili \
 # root-gui-qt5webdisplay root-gui-qt6webdisplay
 # root-gui-browserv7 root-gui-builder root-gui-canvaspainter root-gui-fitpanel
 # root-gui-fitpanelv7 root-gui-ged root-gui-html root-gui-webdisplay
-# root root-gui-recorder root-gui-webgui6 # root-gui root-gui-browsable
+# root-gui-recorder root-gui-webgui6 root-gui root-gui-browsable
+# root-roofit-common root-io-gfal
 RUN dnf -y install HepMC3-rootIO python3-HepMC3-rootIO python3-jupyroot python3-root
 
 # install the osg worker node client packages
