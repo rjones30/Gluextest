@@ -39,7 +39,7 @@ RUN dnf -y install lapack lapack-devel openmpi openmpi-devel xalan-j2
 RUN dnf -y install openssh-server postgresql-server-devel postgresql-upgrade-devel
 RUN dnf -y install procps-ng strace ucx valgrind xerces-c xerces-c-devel xerces-c-doc
 RUN dnf -y install qt5 qt5-qtx11extras qt5-devel openblas-devel libnsl2-devel
-RUN dnf -y install libcurl-devel uClibc-devel
+RUN dnf -y install libcurl-devel uClibc-devel libuuid-devel
 
 # install the cern root suite
 RUN dnf -y install root root-cling root-fftw root-foam root-fonts root-fumili \
