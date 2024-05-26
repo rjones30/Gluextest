@@ -90,6 +90,11 @@ RUN pip3 install keras
 RUN pip3 install tensorflow tensorflow-decision-forests
 RUN pip3 install uproot awkward
 
+# install the vscode editor
+RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc
+RUN echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo 
+RUN dnf -y install code
+
 # create custom points, symlinks for gluex software
 RUN wget --no-check-certificate https://zeus.phys.uconn.edu/halld/gridwork/local9.tar.gz
 RUN tar -zxf local9.tar.gz --owner=root --group=root -C /
