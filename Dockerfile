@@ -89,6 +89,8 @@ RUN pip3 install h5hep
 RUN pip3 install keras
 RUN pip3 install tensorflow tensorflow-decision-forests
 RUN pip3 install uproot awkward
+RUN pip3 install jupyterhub
+RUN pip3 install jupyterlab notebook
 
 # install the vscode editor
 RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc
