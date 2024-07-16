@@ -28,7 +28,7 @@ RUN dnf -y install bind-utils blas blas-devel dump file tcsh expat-devel
 RUN dnf -y install libXt-devel openmotif-devel libXpm-devel bzip2-devel
 RUN dnf -y install perl-XML-Simple perl-XML-Writer perl-File-Slurp
 RUN dnf -y install mesa-libGLU-devel gsl-devel python3-future python3-devel
-RUN dnf -y install xrootd-client-libs xrootd-client libXi-devel neon
+RUN dnf -y install xrootd-client-libs xrootd-client xrootd-client-devel libXi-devel neon
 RUN dnf -y install mariadb mariadb-devel python3-mysqlclient python3-psycopg2
 RUN dnf -y install fmt-devel libtirpc-devel atlas rsync vim
 RUN dnf -y install gfal2-all gfal2-devel gfal2-plugin-dcap gfal2-plugin-gridftp gfal2-plugin-srm
