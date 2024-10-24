@@ -15,7 +15,8 @@ RUN dnf -y update
 RUN dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 RUN grep 'enabled=1' /etc/yum.repos.d/epel.repo
 RUN /usr/bin/crb enable
-RUN dnf -y install https://repo.opensciencegrid.org/osg/3.6/osg-3.6-el9-release-latest.rpm
+#RUN dnf -y install https://repo.opensciencegrid.org/osg/3.6/osg-3.6-el9-release-latest.rpm
+RUN dnf -y install https://repo.opensciencegrid.org/osg/23-main/osg-23-main-el9-release-latest.rpm
 RUN grep 'enabled=1' /etc/yum.repos.d/osg.repo
 
 # install a few utility rpms
@@ -77,7 +78,7 @@ RUN dnf -y install HepMC3-rootIO python3-HepMC3-rootIO python3-jupyroot python3-
 
 # install the osg worker node client packages
 RUN dnf -y install osg-ca-certs
-RUN dnf -y install osg-wn-client
+RUN dnf -y install osg-wn-client htgettoken
 RUN dnf -y install python3-h5py python3-scipy python3-tqdm
 
 # install some dcache client tools
