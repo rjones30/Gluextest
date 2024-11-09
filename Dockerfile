@@ -75,6 +75,7 @@ RUN dnf -y install root root-cling root-fftw root-foam root-fonts root-fumili \
 # root-gui-recorder root-gui-webgui6 root-gui root-gui-browsable
 # root-roofit-common root-io-gfal
 RUN dnf -y install HepMC3-rootIO python3-HepMC3-rootIO python3-jupyroot python3-root
+RUN dnf -y install pandoc texlive-tcolorbox texlive-upquote texlive-adjustbox texlive-titling texlive-ulem
 
 # install the osg worker node client packages
 RUN dnf -y install osg-ca-certs
