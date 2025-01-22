@@ -41,6 +41,7 @@ RUN dnf -y install openssh-server postgresql-server-devel postgresql-upgrade-dev
 RUN dnf -y install procps-ng strace ucx valgrind xerces-c xerces-c-devel xerces-c-doc
 RUN dnf -y install qt5 qt5-qtx11extras qt5-devel openblas-devel libnsl2-devel
 RUN dnf -y install libcurl-devel uClibc-devel libuuid-devel
+RUN dnf -y install https://dl.pelicanplatform.org/7.12.0/pelican-7.12.0-1.x86_64.rpm
 
 # install the cern root suite
 RUN dnf -y install root root-cling root-fftw root-foam root-fonts root-fumili \
@@ -59,7 +60,7 @@ RUN dnf -y install root root-cling root-fftw root-foam root-fonts root-fumili \
  root-netx root-notebook root-physics root-proof root-proof-bench \
  root-proof-player root-proof-sessionviewer root-quadp root-r root-r-tools \
  root-roofit root-roofit-batchcompute root-roofit-core \
- root-roofit-dataframe-helpers root-roofit-hs3 root-roofit-jsoninterface \
+ root-roofit-hs3 root-roofit-jsoninterface \
  root-roofit-more root-roostats root-smatrix \
  root-spectrum root-spectrum-painter root-splot root-sql-mysql \
  root-sql-odbc root-sql-pgsql root-sql-sqlite root-testsupport \
@@ -74,6 +75,7 @@ RUN dnf -y install root root-cling root-fftw root-foam root-fonts root-fumili \
 # root-gui-fitpanelv7 root-gui-ged root-gui-html root-gui-webdisplay
 # root-gui-recorder root-gui-webgui6 root-gui root-gui-browsable
 # root-roofit-common root-io-gfal
+# root-roofit-dataframe-helpers
 RUN dnf -y install HepMC3-rootIO python3-HepMC3-rootIO python3-jupyroot python3-root
 RUN dnf -y install pandoc texlive-tcolorbox texlive-upquote texlive-adjustbox texlive-titling texlive-ulem
 
